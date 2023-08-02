@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState,useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
@@ -22,6 +22,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Calendar from "./scenes/calendar/calendar";
 
+
 function App() {
   const [theme, colorMode] = useMode();
   const [data, setData] = useState([]);
@@ -29,7 +30,7 @@ function App() {
   useEffect(() => {
     fetchData();
   }, []);
-
+  
   const fetchData = async () => {
     try {
       const response = await fetch("http://localhost:8000/api/"); // Replace with your Django API endpoint URL
@@ -39,7 +40,7 @@ function App() {
       console.error("Error fetching data:", error);
     }
   };
-
+  
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
@@ -68,15 +69,6 @@ function App() {
               <Route path="/geography" element={<Geography />} />
             </Routes>
           </main>
-          {/* Move the data rendering code here */}
-          <div>
-            {data.map((item) => (
-              <div key={item.id}>
-                <p>{item.name}</p> {/* Replace "name" with the field you want to display */}
-                {/* Display other fields as needed */}
-              </div>
-            ))}
-          </div>
         </div>
       </ThemeProvider>
     </ColorModeContext.Provider>

@@ -13,3 +13,6 @@ class Student(models.Model):
 class OpenedxCourse(models.Model):
     course_code = models.CharField(max_length=100)
     course_name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.course_name

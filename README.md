@@ -40,4 +40,11 @@ Pastikan Anda telah menginstal Python dan pip di sistem Anda sebelum memulai.
    ```shell
    http://localhost:8000/api/
 
-  
+2. Penggunaan endpoint menggunakan localhost:
+   ```shell
+   http://localhost:8000/api/student-add
+
+3. Penggunaan endpoint menggunakan localhost:
+   ```shell
+   http://localhost:8000/api/course
+ 

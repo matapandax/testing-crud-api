@@ -34,7 +34,13 @@ Pastikan Anda telah menginstal Python dan pip di sistem Anda sebelum memulai.
    ```shell
    python manage.py runserver
 
-  ## Penggunaan API
+## Menjalankan project dengan Docker 
+
+1. Gunakan perintah untuk menjalankan docker-compose:
+   ```shell
+   docker-compose up 
+
+## Penggunaan API
 
 1. Penggunaan endpoint menggunakan localhost:
    ```shell
@@ -47,4 +53,6 @@ Pastikan Anda telah menginstal Python dan pip di sistem Anda sebelum memulai.
 3. Penggunaan endpoint menggunakan localhost:
    ```shell
    http://localhost:8000/api/course
+
+
  
